@@ -1,0 +1,28 @@
+.logo {
+  width: 150px;
+  height: auto;
+}
+
+.footer {
+  background-color: black;
+  color: white;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+input[type="search"]{
+  width: 250px;
+}
+
+.menu{
+display:flex;
+padding: 10px;
+width:500px;
+list-style: none;
+justify-content: flex-end;
+}
+
+/*========================*/
+
