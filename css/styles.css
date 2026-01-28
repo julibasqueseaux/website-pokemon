@@ -1,28 +1,267 @@
-.logo {
-  width: 150px;
-  height: auto;
-}
-
-.footer {
-  background-color: black;
-  color: white;
+/* Base + Box Model */
+* {
+  box-sizing: border-box;
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  font-family:
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Arial,
+    sans-serif;
+  color: #111;
+  background: #fff;
 }
 
-input[type="search"]{
-  width: 250px;
+/* Container */
+.container-max {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 16px;
 }
 
-.menu{
-display:flex;
-padding: 10px;
-width:500px;
-list-style: none;
-justify-content: flex-end;
+/* Header */
+.site-header{ background:#fff; }
+
+.container-max{
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 16px;
 }
 
-/*========================*/
+.brand-logo{
+  width: 100%;
+  max-width: 137px;
+  max-height: 77px;
+  height: auto;
+  display: block;
+}
 
+.header-nav{
+  gap: 22px;
+}
+
+.header-nav .nav-link,
+.header-login{
+  color: #111;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 8px 0;
+}
+
+.header-inner{
+  padding-left: 0;   
+  padding-right: 0;
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  background: #f6f6f6;
+}
+
+.hero-media {
+  width: 100%;
+  height: 420px;
+  overflow: hidden;
+}
+
+.hero-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Hero controls (simple) */
+.hero-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 14px 0;
+  background: #fff;
+}
+
+.hero-arrow {
+  border: none;
+  background: transparent;
+  font-size: 26px;
+  line-height: 1;
+  padding: 6px 10px;
+  cursor: pointer;
+  color: #666;
+}
+
+.hero-dots {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: #cfcfcf;
+}
+
+.dot.active {
+  background: #777;
+}
+
+/* Sections */
+.section {
+  padding: 56px 0;
+}
+
+.section-header {
+  margin-bottom: 18px;
+}
+
+.section-title {
+  font-size: 42px;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* CARD */
+.news-card {
+  border: 1px solid #eeeeee;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* IMAGE */
+.news-img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+}
+
+/* DESKTOP: fuerza 207x207 */
+@media (min-width: 992px) {
+  .news-img {
+    width: 207px;
+    height: 207px;
+  }
+}
+
+/* BODY */
+.news-body {
+  padding: 14px; /* BOX MODEL */
+  display: flex; /* FLEX */
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* TEXT */
+.news-date {
+  margin: 0;
+  font-size: 10px;
+  color: #d64b2a;
+  font-weight: 600;
+}
+
+.news-category {
+  margin: 0;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.news-title {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.news-text {
+  margin: 0;
+  font-size: 12px;
+  color: #444;
+  line-height: 1.35;
+}
+
+/* FOOTER */
+.site-footer {
+  background: #0b0b0b;
+  color: #d6d6d6;
+  padding: 28px 0;
+}
+
+.footer-inner {
+  display: flex; /* Flex */
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.footer-title {
+  margin: 0 0 8px 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.footer-copy {
+  margin: 0;
+  font-size: 12px;
+  color: #bdbdbd;
+}
+
+.footer-links {
+  display: flex; /* Flex */
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: #cfcfcf;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-locale {
+  font-size: 12px;
+  color: #cfcfcf;
+}
+
+/* Responsive (HOME counts as one responsive page) */
+@media (max-width: 992px) {
+  .section-title {
+    font-size: 34px;
+  }
+  .hero-media {
+    height: 340px;
+  }
+}
+
+@media (max-width: 576px) {
+  .section {
+    padding: 36px 0;
+  }
+  .section-title {
+    font-size: 30px;
+  }
+  .hero-media {
+    height: 260px;
+  }
+  .brand-logo {
+    width: 105px;
+  }
+}
